@@ -1,17 +1,17 @@
+
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    id("com.android.application") version "8.7.3" apply false
+    id("org.jetbrains.kotlin.android") version "2.0.21" apply false
 }
 
-android {
-    namespace = "com.sathryx.ai"
-    compileSdk = 35
 
-    defaultConfig {
-        applicationId = "com.sathryx.ai"
-        minSdk = 26
-        targetSdk = 35
-        versionCode = 2
-        versionName = "2.0"
+android {
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
     }
 }
